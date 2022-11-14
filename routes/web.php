@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('\send-email', [ContactController::class, 'SendMail'])->name('send.email');
+Route::post('/send-email', [ContactController::class, 'SendMail'])->name('send.email');

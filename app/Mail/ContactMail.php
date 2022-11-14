@@ -9,15 +9,20 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
+
 class ContactMail extends Mailable
 {
     use Queueable, SerializesModels;
+    public $data;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
+
+    
+
     public function __construct($data)
     {
         $this->data = $data;
@@ -43,11 +48,11 @@ class ContactMail extends Mailable
     public function content()
     {
         return new Content(
-            // view: 'email',
-            markdown: 'email',
+            view: 'email',
         );
     }
 
+   
     /**
      * Get the attachments for the message.
      *

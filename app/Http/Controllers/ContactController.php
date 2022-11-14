@@ -18,5 +18,6 @@ class ContactController extends Controller
         
         Mail::to('receive@mail.com')->send(new ContactMail($data));
         return "Thanks For Reaching Out!!!";
+       
     }
 }
